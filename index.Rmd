@@ -12,19 +12,19 @@ Sleep takes up an enormous portion of our lives, but its effects and importance 
 
 ## Related Works:
 
-Extent and Health Consequences of Chronic Sleep Loss and Sleep Disorders
+** Extent and Health Consequences of Chronic Sleep Loss and Sleep Disorders**
 
 Institute of Medicine (US) Committee on Sleep Medicine and Research; Colten HR, Altevogt BM, editors. Sleep Disorders and Sleep Deprivation: An Unmet Public Health Problem. Washington (DC): National Academies Press (US); 2006. Available from: https://www.ncbi.nlm.nih.gov/books/NBK19960/ doi: 10.17226/11617
 
 This sleep study recorded sleep loss (which is any nightly sleep that is less than 7 hours) to have effects on cardiovascular, endocrine, immune, and nervous systems. Specifically, they noted obesity, diabetes, cardiovascular disease, hypertension, anxiety, depression, alcoholism to have a strong correlation with individuals who experienced chronic sleep deprivation. Adolescents need 9 hours of sleep, but only 26% get 6.5 hours or less on school nights. Sleep loss only accumulates as they get older.
 
-What Sleep Loss Does to the Brain and Cognition
+**What Sleep Loss Does to the Brain and Cognition**
 
 Walton, A. G. (2019, November 29). New Studies Show What Sleep Loss Does To The Brain And Cognition. Forbes. https://www.forbes.com/sites/alicegwalton/2019/11/29/new-studies-show-what-sleep-loss-does-to-the-brain-and-cognition/?sh=3f04e2068e30
 
 A sleep study was conducted on students at Michigan State University. Two groups were created, those who stayed up to work in the labs versus those who got a normal night of sleep. The sleep-deprived group had significantly more lapses in attention compared to the rested group. If prolonged, chronic sleep deprived individuals more at risk for cognitive decline, like Alzheimer’s.
 
-Causes and consequences of sleepiness among college students
+**Causes and consequences of sleepiness among college students**
 
 Wang, Z., & Zhao, H. (2014). Sleep deprivation: Impact on cognitive performance. Neuropsychiatric Disease and Treatment, 10, 1809–1825. https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4075951/
 
@@ -32,15 +32,15 @@ This article focuses on daytime sleepiness, sleep deprivation’s impact on coll
 
 ## Datasets:
 
-Sleep health and lifestyle dataset
+**Sleep health and lifestyle dataset**
 
 We used the "Sleep Health and Lifestyle Dataset" from Kaggle as our dataset. The data was accumulated from the University of Michigan records, which was compiled on sleep customs, health behaviors, and lifestyle habits. Through a restricted number of methods such as inquiry and questionnaire, people are finding the relationship between the sleep health and life domains. The target of data-gathering is to gain knowledge about the subject's sleep habits, routine, and present state of health. For ethical reasons, the approach to information management would have to be deliberate. Compared to this, we have to ensure the participant’s confidentiality and have their data being utilized properly and responsibly without any ethical concerns in the interpretation. On the other hand, there is self-report bias in this research, so participants may not be able to correctly report their sleep patterns and health behaviors.
 
-Total Sleep Deprivation Increases Brain Age Prediction Reversibly in Multisite Samples of Young Healthy Adults
+**Total Sleep Deprivation Increases Brain Age Prediction Reversibly in Multisite Samples of Young Healthy Adults**
 
 “Sleep Deprivation among College Students in the US '' was the focus of the study conducted by the National Center for Biotechnology Information (NCBI). Survey, interview, and some objective measurement like sleep tracker are used to gather statistics and research findings on sleep deprivation among college students in the U.S. The aim of the reaserch was to identify the prevalence, causes, and consequences of sleep deprivation among college students having in consideration the fact of academic workload, lifestyle, and mental health. This dataset also needs to address ethical issues. Given the study that involves an individual's academic work, personal life, and mental health, we should be careful that stigmatization or discrimination does not occur. One of these drawbacks is self-reporting biases and the fact that many complex factors can interfere with sleep.
 
-Effect of 24-hour sleep deprivation on cerebral hemodynamics and cognitive performance
+**Effect of 24-hour sleep deprivation on cerebral hemodynamics and cognitive performance**
 
 The University of Oklahoma was the data collection site and it examined how sleep deprivation would affect cerebrovascular hemodynamics in young adults. The study consisted of ten healthy adult males (Mean age of 27.6) with pre and post fNIRS measurement. The participants had performed different cognitive tests before and after the 24-hour total sleep deprivation. The dataset covers the effect that it has on the decision process. The data will thereby assist us in knowing how sleep deficiency affects cognitive functioning and general brain health in general. This data will be supervised by monitoring participants' hemodynamic parameters (heart rate, blood pressure) and cognitive performance (reaction times, memory tests) during the stages of sleep deprivation. The drawback is that the sleep deprivation conditions may not mimic the work patterns and behaviors exactly.
 
