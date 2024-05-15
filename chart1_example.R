@@ -53,3 +53,54 @@ categorize_age <- merge(sleepdata, lifestyle, by = "Age_Range")
 # -------------------- Caffeine consumption dataset --------------------
 caffeine_consumption <- merge(sleepdata, lifestyle, by = "Caffeine.consumption")
 
+#-------------------------------Charting---------------------------------
+library(ggplot2)
+?ggplot
+
+# Caffeine consumption vs Sleep duration
+colnames(merged_sleep)
+
+merged_sleep$Caffeine.consumption <- as.numeric(as.character(merged_sleep$Caffeine.consumption))
+merged_sleep$Sleep.duration <- as.numeric(as.character(merged_sleep$Sleep.duration))
+
+ggplot(merged_sleep, aes(x = Caffeine.consumption, y = Sleep.duration)) +
+  geom_point() +
+  geom_smooth(method = "lm", col = "blue") +
+  labs(title = "Caffeine Consumption vs Sleep Duration",
+       x = "Caffeine Consumption (mg)",
+       y = "Sleep Duration (hours)") 
+
+
+# REM sleep percentage vs Age
+
+merged_sleep <- merged_sleep %>%
+  filter(!is.na(Age.x) & !is.na(REM.sleep.percentage))
+
+merged_sleep$Age.x <- as.numeric(as.character(merged_sleep$Age.x))
+merged_sleep$REM.sleep.percentage <- as.numeric(as.character(merged_sleep$REM.sleep.percentage))
+
+ggplot(merged_sleep, aes(x = Age.x, y = REM.sleep.percentage))+
+  geom_point() +
+  geom_smooth(method = "lm", col = "red") +
+  labs(title = "REM Sleep Percentage vs. Age",
+       x = "Age",
+       y = "REM Sleep Percentage")
+  theme_minimal()
+  
+  # REM sleep percentage vs Caffeine consumption
+  
+merged_sleep$Caffeine.consumption <- as.numeric(as.character(merged_sleep$Caffeine.consumption))
+merged_sleep$REM.sleep.percentage <- as.numeric(as.character(merged_sleep$REM.sleep.percentage))
+  
+aggregated_data <- merged_sleep %>%
+  group_by(Caffeine.consumption) %>%
+  summarize(mean_REM = mean(REM.sleep.percentage, na.rm = TRUE))
+
+ggplot(aggregated_data, aes(x = Caffeine.consumption, y = mean_REM)) +
+  geom_line(color = "blue") +
+  geom_point() +
+  labs(title = "Mean REM Sleep Percentage vs Caffeine Consumption",
+       x = "Caffeine Consumption (mg)",
+       y = "Mean REM Sleep Percentage (%)")
+  
+
