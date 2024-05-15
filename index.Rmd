@@ -29,7 +29,7 @@ A sleep study was conducted on students at Michigan State University. Two groups
 
 Wang, Z., & Zhao, H. (2014). Sleep deprivation: Impact on cognitive performance. Neuropsychiatric Disease and Treatment, 10, 1809–1825. <https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4075951/>
 
-This article focuses on daytime sleepiness, sleep deprivation’s impact on college students’ academic performance and health. Factors contributing to sleep deprivation (irregular sleep schedules, academic workload, phone/technology use, social factors; including parties, social gatherings.., stress and anxiety, environmental factors; noise, light pollution, dorm, temperature). Some correlations found between sleep and learning included memory consolidation, acquisition of knowledge, attention, concentration, and emotional regulation
+This article focuses on daytime sleepiness, sleep deprivation’s impact on college students’ academic performance and health. Factors contributing to sleep deprivation (irregular sleep schedules, academic workload, phone/technology use, social factors; including parties, social gatherings.., stress and anxiety, environmental factors; noise, light pollution, dorm, temperature). Some correlations found between sleep and learning included memory consolidation, acquisition of knowledge, attention, concentration, and emotional regulation.
 
 ## Datasets:
 
