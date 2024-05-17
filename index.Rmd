@@ -116,38 +116,44 @@ Being able to address the diverse needs and preferences in regards to recommendi
 
 Addressing these challenges requires technological innovation, user engagement strategies, privacy measures, and the deep understanding of sleep health in order to create a successful web application. 
 
-Summary Information
+## Summary Information
 
-Write a summary paragraph of findings that includes the 5 values calculated from your summary information R script
+Average Sleep Duration by Age Range: The findings showed that the average sleep duration doesn't have significant differences within age ranges. The bar chart created for visualization shows the average sleep duration by age range.
+
+Average Sleep Duration and REM Sleep Percentage by Gender: The results indicated that males have lower REM sleep percentage. The differences were visualized using a line plot.
+
+Average Sleep Duration by Caffeine Consumption Range: The data suggests not so clear relationship between caffeine consumption and sleep duration. This idea suggests that caffeine consumptions do not have a strong affect in sleep duration or sleep related health.
+
+Average Sleep Duration by Occupation: Within the "lifestyle" data set, it is shown that different occupations have varying impacts on sleep duration. We can tell that managerial roles usually have a shorter sleep duration compared to those who have technical roles.
+
+Average Quality of Sleep by Stress Level: Data demonstrates a decrease in sleep quality when stress level increased. Higher stress levels were associated with lower quality sleep and lower stress levels associated with higher quality of sleep.
+
 
 Table
 
 Include a table of aggregate information
+![this is the table of aggregate information](/Chart.agg/AVG sleep vs stress.png)
+We include this data because it shows a strong visualization between stress and sleep. The results presented a negative connection between the amount of stress and the quality of sleep. Higher stress levels were found to be related to decreased sleep quality. This relationship was seen in a line graph where the average quality of sleep for each level of stress was depicted.
 
-Describe why you included the table and what information it reveals
 
 Chart 1
 
-Include a chart
+![this is chart 1](/Chart.agg/REM.gender.pdf)
 
-Describe why you chose this chart and what information it reveals
+A bar chart is good for comparing discrete categories like gender in terms of their REM sleep percentage. This kind of chart demonstrates those differences between categories very easily.The graph reveals that the females' REM sleep percentage is higher than males by just a little margin. These data help knowing the variations in sleep pattern among genders, especially in terms of REM sleep quality.
 
-Here's an example of how to run an R script inside an RMarkdown file:
-
-<<<<<<< HEAD
-\`\`\``{r, echo = FALSE, code = readLines("chart1_example.R")}`
-=======
-```{r, echo = FALSE, code = readLines("chart1_example.R")}
->>>>>>> origin/main
 
 Chart 2
 
-Include a chart
+![this is chart 2](/Chart.agg/AVG.duration.caffeine.pdf)
 
-Describe why you chose this chart and what information it reveals
+A bar graph may illustrate the average sleep duration across all ranges of caffeine consumption. This facilitates the evaluation of the difference in caffeine intake on sleep duration.
+The graph shows that higher the level of caffeine taken the less the sleep duration. Take for instance, persons consuming between 1-25 mg of caffeine have a longer average sleep duration than those consuming from 76-200 mg. This shows a negative correlation between caffeine intake and sleeping duration.
+
 
 Chart 3
 
-Include a chart
+![this is chart 2](/Chart.agg/AVG.Sleep.Occupation.pdf)
 
-Describe why you chose this chart and what information it reveals
+This graph displays the pairing of the occupations with longer or shorter sleep durations.
+The graph reveals the fact that there are large discrepancies in average sleep duration within different occupations. For example, the length of sleep among the teachers and software engineers is longer in comparison to the physicians and the managers. Such an information may prove quite helpful in explaining the impact of job responsibilities and roles on one's sleeping pattern.
