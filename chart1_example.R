@@ -103,4 +103,15 @@ ggplot(aggregated_data, aes(x = Caffeine.consumption, y = mean_REM)) +
        x = "Caffeine Consumption (mg)",
        y = "Mean REM Sleep Percentage (%)")
   
+# loading another data file 
+
+dataset1 <- read.csv("dataset1.csv")
+
+# cleaning the data
+
+dataset1 <- na.omit(dataset1)
+
+# selecting only the necessary info
+
+dataset1 <- select(dataset1, Age, Sleep.Duration, Quality.of.Sleep, Stress.Level)
 
