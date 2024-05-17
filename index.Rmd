@@ -157,3 +157,11 @@ Chart 3
 
 This graph displays the pairing of the occupations with longer or shorter sleep durations.
 The graph reveals the fact that there are large discrepancies in average sleep duration within different occupations. For example, the length of sleep among the teachers and software engineers is longer in comparison to the physicians and the managers. Such an information may prove quite helpful in explaining the impact of job responsibilities and roles on one's sleeping pattern.
+
+## Resources
+
+Wickham, H., Chang, W., Henry, L., Pedersen, T. L., Takahashi, K., Wilke, C., ... & Dunnington, D. (2024). cut_interval function. In ggplot2: Elegant Graphics for Data Analysis. Retrieved from https://ggplot2.tidyverse.org/reference/cut_interval.html
+
+DataCamp. (2024). How to Merge Data in R: A Step-by-Step DataCamp Tutorial. Retrieved from https://www.datacamp.com/tutorial/merging-data-r
+
+Wickham, H., Chang, W., Henry, L., Pedersen, T. L., Takahashi, K., Wilke, C., ... & Dunnington, D. (2024). ggplot2 Reference. Retrieved from https://ggplot2.tidyverse.org/reference/
