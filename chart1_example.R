@@ -28,7 +28,11 @@ sleepdata <- select(sleepdata, Age, Gender, Sleep.duration, REM.sleep.percentage
 # Selecting only neccessary columns for lifestyle
 # -------------------- Merging dataset --------------------
 
+colnames(dataset1)[2] <- "Sleep.duration"
+
 merged_sleep <- merge(sleepdata, lifestyle, by = "Gender")
+
+merged_sleep_duration <- merge(merged_sleep, dataset1, by = "Sleep.duration")
 
 
 # -------------------- Categorizing dataset --------------------
@@ -68,26 +72,23 @@ ggplot(merged_sleep, aes(x = Caffeine.consumption, y = Sleep.duration)) +
   geom_smooth(method = "lm", col = "blue") +
   labs(title = "Caffeine Consumption vs Sleep Duration",
        x = "Caffeine Consumption (mg)",
-       y = "Sleep Duration (hours)") 
+       y = "Sleep Duration (hours)") +
+  theme_minimal()
 
 
-# REM sleep percentage vs Age
+# Sleep Duration vs Physical Activity Level
 
-merged_sleep <- merged_sleep %>%
-  filter(!is.na(Age.x) & !is.na(REM.sleep.percentage))
+merged_sleep_duration$Sleep.duration <- as.numeric(as.character(merged_sleep_duration$Sleep.duration))
+merged_sleep_duration$Physical.Activity.Level <- as.numeric(as.character(merged_sleep_duration$Physical.Activity.Level))
 
-merged_sleep$Age.x <- as.numeric(as.character(merged_sleep$Age.x))
-merged_sleep$REM.sleep.percentage <- as.numeric(as.character(merged_sleep$REM.sleep.percentage))
-
-ggplot(merged_sleep, aes(x = Age.x, y = REM.sleep.percentage))+
-  geom_point() +
-  geom_smooth(method = "lm", col = "red") +
-  labs(title = "REM Sleep Percentage vs. Age",
-       x = "Age",
-       y = "REM Sleep Percentage")
+ggplot(merged_sleep_duration, aes(x = Sleep.duration, y = Physical.Activity.Level)) +
+  geom_line(color = "blue") +
+  labs(title = "Sleep Duration vs. Physical Activity",
+       x = "Sleep Duration",
+       y = "Physical Activity") +
   theme_minimal()
   
-  # REM sleep percentage vs Caffeine consumption
+# REM sleep percentage vs Caffeine consumption
   
 merged_sleep$Caffeine.consumption <- as.numeric(as.character(merged_sleep$Caffeine.consumption))
 merged_sleep$REM.sleep.percentage <- as.numeric(as.character(merged_sleep$REM.sleep.percentage))
@@ -102,6 +103,24 @@ ggplot(aggregated_data, aes(x = Caffeine.consumption, y = mean_REM)) +
   labs(title = "Mean REM Sleep Percentage vs Caffeine Consumption",
        x = "Caffeine Consumption (mg)",
        y = "Mean REM Sleep Percentage (%)")
+
+
+# Sleep Duration vs Stress Level (aggregated data)
+
+merged_sleep_duration$Sleep.duration <- as.numeric(as.character(merged_sleep_duration$Sleep.duration))
+merged_sleep_duration$Stress.Level.x <- as.numeric(as.character(merged_sleep_duration$Stress.Level.x))
+
+aggregated_data_sleep <- merged_sleep_duration %>%
+  group_by(Stress.Level.x) %>%
+  summarize(mean_sleep_duration = mean(Sleep.duration, na.rm = TRUE))
+
+ggplot(aggregated_data_sleep, aes(x = Stress.Level.x, y = mean_sleep_duration)) +
+  geom_line(color = "blue") +
+  geom_point() +
+  labs(title = "Sleep Duration vs Stress Level (aggregated data)",
+       x = "Stress Level",
+       y = "Mean Sleep Duration")
+
   
 # loading another data file 
 
