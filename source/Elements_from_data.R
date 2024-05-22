@@ -38,7 +38,7 @@ avg_age_sleepdata <- sleepdata %>%
   summarise(Avg_Sleep_Duration = mean(Sleep.duration, na.rm = TRUE))
   
 #1 Visualization
-ggplot(avg_age_sleepdata, aes(x = Age.range, y = Avg_Sleep_Duration, fill = Age.range)) + 
+avg_age_sleepdata_chart <- ggplot(avg_age_sleepdata, aes(x = Age.range, y = Avg_Sleep_Duration, fill = Age.range)) + 
   geom_bar(stat = "identity") +
   labs(title = "Average Sleep Duration by Age Range", x = "Age Range", y = "Average Sleep Duration (hours)")
 
@@ -52,13 +52,13 @@ avg_sleep_rem_by_gender <- sleepdata %>%
   )
 
 #2-1 visualization
-ggplot(avg_sleep_rem_by_gender, aes(x = Gender, y = Avg_Gender_Sleep_Duration, group = 1, color = Gender)) +
+avg_sleep_duration_by_gender_chart <- ggplot(avg_sleep_rem_by_gender, aes(x = Gender, y = Avg_Gender_Sleep_Duration, group = 1, color = Gender)) +
   geom_line(size = 1) +
   geom_point(size = 3) +
   labs(title = "Average Sleep Duration by Gender", x = "Gender", y = "Average Sleep Duration (hours)")
 
 #2-2 visualization
-ggplot(avg_sleep_rem_by_gender, aes(x = Gender, y = Avg_REM_Sleep_Percentage, color = Gender)) +
+avg_sleep_rem_by_gender_chart <- ggplot(avg_sleep_rem_by_gender, aes(x = Gender, y = Avg_REM_Sleep_Percentage, color = Gender)) +
   geom_point(size = 5) +
   labs(title = "Average REM Sleep Percentage by Gender", x = "Gender", y = "Average REM Sleep Percentage")
 
@@ -73,7 +73,7 @@ avg_sleep_by_caffeine <- filtered_data %>%
   summarise(Avg_Sleep_Duration = mean(Sleep.duration, na.rm = TRUE))
 
 #3 visualization
-ggplot(avg_sleep_by_caffeine, aes(x = Caffeine.range, y = Avg_Sleep_Duration, fill = Caffeine.range)) +
+avg_sleep_by_caffeine_chart <- ggplot(avg_sleep_by_caffeine, aes(x = Caffeine.range, y = Avg_Sleep_Duration, fill = Caffeine.range)) +
   geom_bar(stat = "identity") +
   labs(title = "Average Sleep Duration by Caffeine Consumption Range", x = "Caffeine Consumption Range (mg)", y = "Average Sleep Duration (hours)")
 
@@ -86,9 +86,10 @@ avg_sleep_duration_by_occupation <- lifestyle %>%
   summarise(Avg_Sleep_Duration = mean(Sleep.Duration, na.rm = TRUE))
 
 #4 visualization
-ggplot(avg_sleep_duration_by_occupation, aes(x = reorder(Occupation, Avg_Sleep_Duration), y = Avg_Sleep_Duration, fill = Occupation)) +
+avg_sleep_duration_by_occupation_chart <- ggplot(avg_sleep_duration_by_occupation, aes(x = reorder(Occupation, Avg_Sleep_Duration), y = Avg_Sleep_Duration, fill = Occupation)) +
   geom_bar(stat = "identity") +
-  labs(title = "Average Sleep Duration by Occupation", x = "Occupation", y = "Average Sleep Duration (hours)")
+  labs(title = "Average Sleep Duration by Occupation", x = "Occupation", y = "Average Sleep Duration (hours)") + 
+  theme(axis.text.x = element_text(angle = 90, vjust = 0.5))
 
 #5 value
 avg_quality_of_sleep_by_stress_level <- lifestyle %>%
@@ -97,7 +98,7 @@ avg_quality_of_sleep_by_stress_level <- lifestyle %>%
   arrange(Stress.Level)
 
 #5 visualization
-ggplot(avg_quality_of_sleep_by_stress_level, aes(x = Stress.Level, y = Avg_Quality_of_Sleep)) +
+avg_quality_of_sleep_by_stress_level_chart <- ggplot(avg_quality_of_sleep_by_stress_level, aes(x = Stress.Level, y = Avg_Quality_of_Sleep)) +
   geom_line(size = 1, color = "blue") +
   geom_point(size = 3, color = "red") +
   labs(title = "Average Quality of Sleep by Stress Level", x = "Stress Level", y = "Average Quality of Sleep")
